@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE SpaceArenaWorld [
+  <!ELEMENT World (SpaceData)>
+  <!ELEMENT SpaceData (SpaceObject+)>
+  <!ATTLIST SpaceObject
+    name          CDATA #REQUIRED
+    x             CDATA #REQUIRED
+    y             CDATA #REQUIRED
+    direction_x   CDATA #REQUIRED
+    direction_y   CDATA #REQUIRED
+    toughness     CDATA #REQUIRED
+  >
+]>
+
+<World>
+  <SpaceData>
+     <!-- First space object MUST be of a type SO_SPACESHIP - it will have ID==0 (PLAYER_SHIP_ID, see globals.h) -->
+    <SpaceObject name="Kras" template="RazorTemplate" x="1900" y="300" direction_x="1" direction_y="0" toughness="300" />
+    <SpaceObject name="Jude Star" template="StarTemplate" x="0" y="0" direction_x="1" direction_y="0" toughness="1000000" />
+    <SpaceObject name="Avanawel" template="AsteroidTemplate1" x="-2700" y="-1800" direction_x="1" direction_y="0" toughness="100000" />
+    <SpaceObject name="Hillsborn" template="AsteroidTemplate2" x="1500" y="860" direction_x="1" direction_y="0" toughness="100000" />
+    <SpaceObject name="Darkworld" template="AsteroidTemplate3" x="1800" y="1020" direction_x="1" direction_y="0" toughness="100000" />
+    <SpaceObject name="Jeshive piece 1" template="AsteroidTemplate3" x="-800" y="820" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 2" template="AsteroidTemplate3" x="-990" y="400" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 3" template="AsteroidTemplate3" x="-1500" y="200" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 4" template="AsteroidTemplate3" x="-1200" y="320" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 5" template="AsteroidTemplate3" x="-1238" y="520" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 6" template="AsteroidTemplate3" x="-1730" y="620" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 7" template="AsteroidTemplate3" x="-1690" y="1270" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 8" template="AsteroidTemplate3" x="-1230" y="1320" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 9" template="AsteroidTemplate3" x="-1270" y="2120" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Jeshive piece 10" template="AsteroidTemplate3" x="-1800" y="1720" direction_x="1" direction_y="0" toughness="500" />
+    <SpaceObject name="Supply Station" template="TorusTemplate" x="2600" y="200" direction_x="1" direction_y="0" toughness="10000" />
+  </SpaceData>
+</World>

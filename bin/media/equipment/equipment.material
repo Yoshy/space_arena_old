@@ -1,0 +1,33 @@
+material Equipment/ShipSheme
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture shemes/razor.png
+			}
+		}
+	}
+}
+
+material Equipment/Slot
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture slot.png
+			}
+		}
+	}
+}

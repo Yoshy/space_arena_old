@@ -1,0 +1,31 @@
+template container Panel(Equipment/Slot)
+{
+	metrics_mode pixels
+	left 0
+	top 0
+	width 32
+	height 32
+	material Equipment/Slot
+}
+
+Equipment/ShipShemeOverlay
+{
+	zorder 600
+	container Panel(Equipment/ShipSheme)
+	{
+		metrics_mode pixels
+		left 0
+		top 0
+		width 256
+		height 256
+		material Equipment/ShipSheme
+	}
+	container Panel(Equipment/ShipShemeHoldAmountText)
+	{
+		metrics_mode pixels
+		left 0
+		top 0
+		width 256
+		height 288
+	}
+}

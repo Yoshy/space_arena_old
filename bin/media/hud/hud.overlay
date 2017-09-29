@@ -1,0 +1,232 @@
+template container Panel(HUD/dot)
+{
+	metrics_mode pixels
+	left 0
+	top 0
+	width 1
+	height 1
+	material HUD/Red
+}
+
+template container Panel(HUD/radarDot)
+{
+	metrics_mode pixels
+	left 0
+	top 0
+	width 5
+	height 5
+	material HUD/radar/GreenCircle
+}
+
+HUD/shipstatsOverlay
+{
+	zorder 600
+	container Panel(HUD/shipstats)
+	{
+		metrics_mode pixels
+		left 10
+		top 150
+		width 128
+		height 64
+		//height 128
+		material HUD/shipstats
+		container Panel(HUD/shipstats/energyBar)
+		{
+			metrics_mode pixels
+			left 23
+			top 5
+			width 80
+			height 5
+			material HUD/Yellow
+		}
+		container Panel(HUD/shipstats/shieldBar)
+		{
+			metrics_mode pixels
+			left 23
+			top 16
+			width 90
+			height 5
+			material HUD/Blue
+		}
+		container Panel(HUD/shipstats/intactBar)
+		{
+			metrics_mode pixels
+			left 23
+			top 27
+			width 100
+			height 5
+			material HUD/Red
+		}
+	}
+}
+
+HUD/radarOverlay
+{
+	zorder 600
+	container Panel(HUD/radar)
+	{
+		metrics_mode pixels
+		left 10
+		top 10
+		width 128
+		height 128
+		material HUD/radar
+	}
+}
+
+HUD/topStatusBarOverlay
+{
+	zorder 600
+	container Panel(HUD/topStatusBar)
+	{
+		metrics_mode pixels
+		left 148
+		top 10
+		width 512
+		height 32
+		material HUD/topStatusBar
+		element TextArea(HUD/topStatusBar/statusText1)
+		{
+			metrics_mode pixels
+			left 20
+			top 5
+			width 448
+			height 20
+			font_name Digital
+			char_height 13
+			colour_top 1 1 1
+			colour_bottom 1 1 1
+		}
+		element TextArea(HUD/topStatusBar/statusText2)
+		{
+			metrics_mode pixels
+			left 20
+			top 17
+			width 448
+			height 20
+			font_name Digital
+			char_height 13
+			colour_top 1 1 1
+			colour_bottom 1 1 1
+		}
+	}
+}
+
+HUD/debugOverlay
+{
+	zorder 600
+	container BorderPanel(HUD/debugOverlayContainer)
+	{
+		metrics_mode pixels
+		horz_align left
+		vert_align top
+		left 150 
+		top 42
+		width 90
+		height 160
+		element TextArea(HUD/debugOverlay/CurrFps)
+		{
+			metrics_mode pixels
+			left 5
+			top 5
+			width 90
+			height 20
+			font_name Digital
+			char_height 19
+			caption FPS:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/NumShips)
+		{
+			metrics_mode pixels
+			left 5
+			top 20
+			width 90
+			height 20
+			font_name Digital
+			char_height 19
+			caption Ships:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/NumPlanets)
+		{
+			metrics_mode pixels
+			left 5
+			top 40
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/text1)
+		{
+			metrics_mode pixels
+			left 5
+			top 60
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/text2)
+		{
+			metrics_mode pixels
+			left 5
+			top 80
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/text3)
+		{
+			metrics_mode pixels
+			left 5
+			top 100
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/text4)
+		{
+			metrics_mode pixels
+			left 5
+			top 120
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+		element TextArea(HUD/debugOverlay/text5)
+		{
+			metrics_mode pixels
+			left 5
+			top 140
+			width 90
+			height 30
+			font_name Digital
+			char_height 19
+			caption Planets:
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+	}
+}

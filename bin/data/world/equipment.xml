@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE spacearenaEquipment [
+  <!ELEMENT equipments (equipment+)>
+  <!ELEMENT equipment (longitudinalThrust?, transversalThrust?, power?, ammunitionID?, ttl?, firePeriod?, objectTemplate?, cartridges?, thrust?)>
+  <!ATTLIST equipment
+	ID      CDATA #REQUIRED
+    type          (EQ_DRIVE|EQ_ENERGY_CELL|EQ_WEAPON) #REQUIRED
+    name          CDATA #REQUIRED
+    description   CDATA #REQUIRED
+  >
+]>
+
+<equipments>
+    <equipment ID="rpi600" type="EQ_DRIVE" name="RPI-600 Drive" description="Resonanse Plasma Injection drive. Third generation of RPI drives, manufactured by MD Industries. This is a commonly used drive on wide range of current A-class vessels.">
+		<!-- Thrust is in Newtons -->
+		<longitudinalThrust>869000000</longitudinalThrust>
+		<transversalThrust>536000000</transversalThrust>
+	</equipment>
+    <equipment ID="pe9000" type="EQ_ENERGY_CELL" name="PE9000 Cell" description="Standard power unit. Manufactured by some unknown periferial world. ISO 7K-3678879-3049 compliant (at least, says so the tag on the module). Pretty good quality, at first glance.">
+		<!-- Power is in megavolt-amperes -->
+		<power>1</power>
+	</equipment>
+    <equipment ID="megano12" type="EQ_WEAPON" name="Megano-12 Laser" description="Megano-12 is a standard energy weapon of police and military forces. Civilians also can use this weapon, but this requires a license. Developed by MD Industries and manufactured by many vendors, who have manufacturing license.">
+		<ammunitionID>_energy_</ammunitionID>
+		<firePeriod>0.1</firePeriod>
+	</equipment>
+    <equipment ID="nutcrackerLauncher" type="EQ_WEAPON" name="JJ-160 <Nutcracker> missile launcher" description="JJ-160 <Nutcracker> missile launcher">
+		<ammunitionID>nutcracker</ammunitionID>
+		<objectTemplate>NutcrackerTemplate</objectTemplate>
+		<ttl>15</ttl>
+		<firePeriod>1</firePeriod>
+	</equipment>
+    <equipment ID="nutcracker" type="EQ_AMMO" name="JJ-160 <Nutcracker> Missile" description="Space-to-Space missile with intellectual active radar guidance system. Simple and efficient weapon against small and medium targets. Used everywhere thanks to it price-performance ratio.">
+		<cartridges>1</cartridges>
+		<explosiveEnergy>5000</explosiveEnergy>
+		<thrust>5000000</thrust>
+	</equipment>
+</equipments>

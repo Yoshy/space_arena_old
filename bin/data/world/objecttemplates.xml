@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE spaceObjectTemplates [
+  <!ELEMENT SpaceObjectTemplates (SpaceObjectTemplate+)>
+  <!ELEMENT SpaceObjectTemplate (Slot*, Hold*)>
+  <!ATTLIST SpaceObjectTemplate
+    type                (SO_SPACESHIP|SO_ASTEROID|SO_PROJECTILE) #REQUIRED
+    name                CDATA #REQUIRED
+	meshName            CDATA #REQUIRED
+    materialName        CDATA #REQUIRED
+    meshScale           CDATA #REQUIRED
+	boundingSphereScale CDATA #REQUIRED
+    orientation_x       CDATA #REQUIRED
+    orientation_y       CDATA #REQUIRED
+    orientation_z       CDATA #REQUIRED
+    orientation_w       CDATA #REQUIRED
+    density             CDATA #REQUIRED
+  >
+  <!ATTLIST Slot
+    type     (EQ_DRIVE|EQ_ENERGY_CELL|EQ_WEAPON) #REQUIRED
+    xpos      CDATA #REQUIRED
+    ypo       CDATA #REQUIRED
+	installed CDATA #REQUIRED
+  >
+  <!ATTLIST Hold
+    type     (EQ_DRIVE|EQ_ENERGY_CELL|EQ_WEAPON|EQ_AMMO) #REQUIRED
+	installed CDATA #REQUIRED
+    amount    CDATA #REQUIRED
+  >
+]>
+
+<SpaceObjectTemplates>
+    <SpaceObjectTemplate type="SO_SPACESHIP" name="RazorTemplate" spaceshipShemeName="razor" meshName="razor.mesh" materialName="SpaceObject/Razor" meshScale="1" boundingSphereScale="80" orientation_x="0.5" orientation_y="0.5" orientation_z="0.5" orientation_w="0.5" density="1">
+	    <Slot type="EQ_ENERGY_CELL" xpos="112" ypos="70" installed="pe9000" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="112" ypos="110" installed="" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="112" ypos="150" installed="" />
+	    <Slot type="EQ_WEAPON" xpos="10" ypos="165" installed="nutcrackerLauncher" />
+	    <Slot type="EQ_WEAPON" xpos="214" ypos="165" installed="megano12" />
+	    <Slot type="EQ_DRIVE" xpos="112" ypos="200" installed="rpi600" />
+	    <Hold type="EQ_AMMO" installed="nutcracker" amount="6" />
+	</SpaceObjectTemplate>
+    <SpaceObjectTemplate type="SO_SPACESHIP" name="TorusTemplate" spaceshipShemeName="torus" meshName="torus.mesh" materialName="SpaceObject/SpaceShipHull" meshScale="3" boundingSphereScale="255" orientation_x="0.5" orientation_y="0.5" orientation_z="0.5" orientation_w="0.5" density="10">
+	    <Slot type="EQ_WEAPON" xpos="112" ypos="20" installed="megano12" />
+	    <Slot type="EQ_WEAPON" xpos="50" ypos="50" installed="" />
+	    <Slot type="EQ_WEAPON" xpos="174" ypos="50" installed="" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="112" ypos="60" installed="pe9000" />
+	    <Slot type="EQ_WEAPON" xpos="20" ypos="112" installed="" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="60" ypos="112" installed="pe9000" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="166" ypos="112" installed="pe9000" />
+	    <Slot type="EQ_WEAPON" xpos="206" ypos="112" installed="" />
+	    <Slot type="EQ_ENERGY_CELL" xpos="112" ypos="166" installed="pe9000" />
+	    <Slot type="EQ_WEAPON" xpos="50" ypos="174" installed="" />
+	    <Slot type="EQ_WEAPON" xpos="174" ypos="174" installed="" />
+	    <Slot type="EQ_WEAPON" xpos="112" ypos="206" installed="megano12" />
+	    <Hold type="EQ_AMMO" installed="nutcracker" amount="300" />
+	    <Hold type="EQ_ENERGY_CELL" installed="pe9000" amount="450" />
+	    <Hold type="EQ_DRIVE" installed="rpi600" amount="18" />
+	    <Hold type="EQ_WEAPON" installed="megano12" amount="8" />
+	    <Hold type="EQ_WEAPON" installed="nutcrackerLauncher" amount="6" />
+	</SpaceObjectTemplate>
+	<SpaceObjectTemplate type="SO_ASTEROID" name="StarTemplate" meshName="sphere.mesh" materialName="SpaceObject/Star" meshScale="13" boundingSphereScale="325" orientation_x="0" orientation_y="0" orientation_z="0" orientation_w="1" density="10"/>
+    <SpaceObjectTemplate type="SO_ASTEROID" name="AsteroidTemplate1" meshName="sphere.mesh" materialName="SpaceObject/Asteroid" meshScale="10" boundingSphereScale="250" orientation_x="0" orientation_y="0" orientation_z="0" orientation_w="1" density="10" />
+    <SpaceObjectTemplate type="SO_ASTEROID" name="AsteroidTemplate2" meshName="sphere.mesh" materialName="SpaceObject/Asteroid" meshScale="8" boundingSphereScale="200" orientation_x="0" orientation_y="0" orientation_z="0" orientation_w="1" density="10" />
+    <SpaceObjectTemplate type="SO_ASTEROID" name="AsteroidTemplate3" meshName="sphere.mesh" materialName="SpaceObject/Asteroid" meshScale="3" boundingSphereScale="75" orientation_x="0" orientation_y="0" orientation_z="0" orientation_w="1" density="10" />
+    <SpaceObjectTemplate type="SO_PROJECTILE" name="NutcrackerTemplate" meshName="nutcracker.mesh" materialName="mecprojectiles" meshScale="0.2" boundingSphereScale="50" orientation_x="-0.5" orientation_y="-0.5" orientation_z="0.5" orientation_w="0.5" density="0.001" />
+</SpaceObjectTemplates>

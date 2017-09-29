@@ -1,0 +1,16 @@
+Digital
+{
+	type 		truetype
+	source 		DS-DIGIB.ttf
+	size 		32
+	resolution 	75
+}
+
+Sector17
+{
+	type 		truetype
+	source 		sector_017.ttf
+	size 		32
+	resolution 	110
+}
+

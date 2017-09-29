@@ -1,0 +1,75 @@
+material mecprojectiles
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.498039 0.498039 0.498039 1
+			diffuse 0.498039 0.498039 0.498039 1
+			specular 0.32 0.32 0.32 3 0
+
+			texture_unit
+			{
+				texture mec_projectiles_c.jpg
+			}
+		}
+
+	}
+
+}
+
+material SpaceObject/Asteroid
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture Cerean2_di.tga
+			}
+		}
+	}
+}
+material SpaceObject/Star
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sun.png
+			}
+		}
+	}
+}
+material SpaceObject/SpaceShipHull
+{
+
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture spaceship_hull.jpg
+				scale 0.6 0.6
+			}
+		}
+	}
+}
+
+material SpaceObject/Razor
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture razor.jpg
+			}
+		}
+	}
+}

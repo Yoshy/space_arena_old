@@ -1,0 +1,136 @@
+material HUD/radar
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture radar.png
+			}
+		}
+	}
+}
+
+material HUD/shipstats
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture shipstats_short.png
+			}
+		}
+	}
+}
+
+material HUD/topStatusBar
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture top_status_bar.png
+			}
+		}
+	}
+}
+
+material HUD/radar/GreenCircle
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture greencircle.png
+			}
+		}
+	}
+}
+
+material HUD/radar/RedSquare
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture redsquare.png
+			}
+		}
+	}
+}
+
+material HUD/Yellow
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture yellowdot.png
+			}
+		}
+	}
+}
+
+material HUD/Red
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture reddot.png
+			}
+		}
+	}
+}
+
+material HUD/Blue
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_check off
+			texture_unit
+			{
+				texture bluedot.png
+			}
+		}
+	}
+}
+
